@@ -14,22 +14,7 @@ config :teddy, TeddyWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
-  check_origin: false,
-  watchers: [
-    node: [
-      "node_modules/react-scripts/bin/react-scripts.js",
-      "start",
-      cd: Path.expand("../assets", __DIR__)
-    ]
-  ],
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$",
-      ~r"lib/teddy_web/(live|views)/.*(ex)$",
-      ~r"lib/teddy_web/templates/.*(eex)$"
-    ]
-  ]
+  check_origin: false
 
 # Logger
 config :logger, :console, format: "[$level] $message\n"
