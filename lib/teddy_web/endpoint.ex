@@ -10,11 +10,7 @@ defmodule TeddyWeb.Endpoint do
     signing_salt: "283sy4W4"
   ]
 
-  plug Plug.Static,
-    at: "/",
-    from: :teddy,
-    gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+  plug Plug.Static, at: "/", from: :teddy
 
   if code_reloading? do
     plug Phoenix.CodeReloader
